@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7E7666DA-C026-4BD6-8288-7CDBFA135FD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DE31B7C7-EAB6-4CC0-8181-B048CBE49367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HGV.Raindrop", "src\HGV.Raindrop.csproj", "{8B05E9EF-3BEA-430E-9833-D9F585183721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HGV.Raindrop.Test", "test\HGV.Raindrop.Test.csproj", "{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B05E9EF-3BEA-430E-9833-D9F585183721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B05E9EF-3BEA-430E-9833-D9F585183721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B05E9EF-3BEA-430E-9833-D9F585183721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B05E9EF-3BEA-430E-9833-D9F585183721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B05E9EF-3BEA-430E-9833-D9F585183721} = {7E7666DA-C026-4BD6-8288-7CDBFA135FD9}
+		{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD} = {DE31B7C7-EAB6-4CC0-8181-B048CBE49367}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 770ec4e5-2ccf-437d-994f-d2ad7c522341
+	EndGlobalSection
+EndGlobal
