@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net46</TargetFramework>
     <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
+    <UserSecretsId>2f0c3478-cb03-499b-a6ea-f14dafdbf3df</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

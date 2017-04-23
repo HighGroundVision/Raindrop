@@ -38,18 +38,15 @@ namespace HGV.Raindrop
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
-            app.UseResponseCaching();
-
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
             }
             else
             {
-                app.UseStatusCodePages();
-                //app.UseExceptionHandler("/Home/Error");
+                app.UseResponseCaching();
+                app.UseExceptionHandler();
             }
 
             app.UseStaticFiles();

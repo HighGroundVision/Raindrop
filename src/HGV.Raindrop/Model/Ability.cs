@@ -26,7 +26,7 @@ namespace HGV.Raindrop.Model
         public List<double> cast_point { get; set; }
         public List<double> channel_time { get; set; }
         public List<double> cooldown { get; set; }
-        public List<int> manacost { get; set; }
+        public List<double> manacost { get; set; }
         public List<double> duration { get; set; }
         public List<double> damage { get; set; }       
         public double support_value { get; set; }
@@ -44,7 +44,7 @@ namespace HGV.Raindrop.Model
             this.duration = new List<double>();
             this.duration = new List<double>();
             this.damage = new List<double>();
-            this.manacost = new List<int>();
+            this.manacost = new List<double>();
             // this.keywords = new List<string>();
         }
 

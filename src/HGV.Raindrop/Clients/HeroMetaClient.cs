@@ -689,7 +689,7 @@ namespace HGV.Raindrop.Clients
             if (ability_data["AbilityManaCost"] != null)
             {
                 var value = (string)ability_data["AbilityManaCost"];
-                ability.manacost = value.Split(' ').Select(_ => int.Parse(_)).ToList();
+                ability.manacost = value.Split(' ').Select(_ => double.Parse(_)).ToList();
             }
 
             if (ability_data["AbilityDuration"] != null)
