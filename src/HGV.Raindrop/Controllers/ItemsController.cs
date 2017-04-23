@@ -16,7 +16,7 @@ namespace HGV.Raindrop.Controllers
     {
         // GET api/items
         [HttpGet()]
-        //[ResponseCache(Duration = 3600)]
+        [ResponseCache(Duration = 3600)]
         public async Task<List<Item>> Get()
         {
             var client = new ItemMetaClient();
