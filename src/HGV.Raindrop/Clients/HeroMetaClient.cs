@@ -79,11 +79,17 @@ namespace HGV.Raindrop.Clients
                     if (key == "npc_dota_hero_target_dummy")
                         continue;
 
+
+                    var tag = key.Replace("npc_dota_hero_", "");
+                    var x = hero_data[tag];
+                    if (x == null)
+                        continue;
+
                     // Create hero
                     var hero = new Hero();
                     hero.key = key;
-                    hero.tag = key.Replace("npc_dota_hero_", "");
-                    hero.name = (string)hero_data[hero.tag]["dname"];
+                    hero.tag = tag;
+                    hero.name = (string)x["dname"];
 
                     // Set defaults
                     MapHero(hero, hero_defaults);
@@ -683,7 +689,7 @@ namespace HGV.Raindrop.Clients
             if (ability_data["AbilityManaCost"] != null)
             {
                 var value = (string)ability_data["AbilityManaCost"];
-                ability.manacost = value.Split(' ').Select(_ => double.Parse(_)).ToList();
+                ability.manacost = value.Split(' ').Select(_ => int.Parse(_)).ToList();
             }
 
             if (ability_data["AbilityDuration"] != null)

@@ -50,11 +50,16 @@ namespace HGV.Raindrop.Clients
                     if (key == "item_river_painter7")
                         continue;
 
+                    var tag = key.Replace("item_", "");
+                    var x = item_data[tag];
+                    if (x == null)
+                        continue;
+
                     // Create hero
                     var item = new Item();
                     item.key = key;
-                    item.tag = key.Replace("item_", "");
-                    item.name = (string)item_data[item.tag]["dname"];
+                    item.tag = tag;
+                    item.name = (string)x["dname"];
 
                     // Set defaults
                     MapItem(item, skill_defaults);
@@ -75,6 +80,94 @@ namespace HGV.Raindrop.Clients
             if (item_data["ID"] != null)
             {
                 item.item_id = (int)item_data["ID"];
+            }
+
+            if (item_data["AbilityCastRange"] != null)
+            {
+                var value = (string)item_data["AbilityCastRange"];
+                item.cast_range = value.Split(' ').Select(_ => int.Parse(_)).ToList();
+            }
+
+            if (item_data["AbilityCooldown"] != null)
+            {
+                var value = (string)item_data["AbilityCooldown"];
+                item.cooldown = value.Split(' ').Select(_ => double.Parse(_)).ToList();
+            }
+
+            if (item_data["ItemKillable"] != null)
+            {
+                item.destructible = (int)item_data["ItemKillable"] == 1;
+            }
+
+            if (item_data["ItemDisassemblable"] != null)
+            {
+                item.disassemblable = (int)item_data["ItemDisassemblable"] == 1;
+            }
+
+            if (item_data["ItemDroppable"] != null)
+            {
+                item.droppable = (int)item_data["ItemDroppable"] == 1;
+            }
+
+            if (item_data["ItemInitialCharges"] != null)
+            {
+                item.initial_charges = (int)item_data["ItemInitialCharges"];
+            }
+
+            if (item_data["AbilityManaCost"] != null)
+            {
+                var value = (string)item_data["AbilityManaCost"];
+                item.manacost = value.Split(' ').Select(_ => int.Parse(_)).ToList();
+            }
+
+            if (item_data["ItemPermanent"] != null)
+            {
+                item.permanent = (int)item_data["ItemPermanent"] == 1;
+            }
+
+            if (item_data["ItemCost"] != null)
+            {
+                item.price = (int)item_data["ItemCost"];
+            }
+
+            if (item_data["ItemPurchasable"] != null)
+            {
+                item.purchasable = (int)item_data["ItemPurchasable"] == 1;
+            }
+
+            if (item_data["ItemQuality"] != null)
+            {
+                item.quality = (string)item_data["ItemQuality"];
+            }
+
+            if (item_data["ItemRecipe"] != null)
+            {
+                item.recipe = (int)item_data["ItemRecipe"] == 1;
+            }
+
+            if (item_data["ItemRequiresCharges"] != null)
+            {
+                item.requires_charges = (int)item_data["ItemRequiresCharges"] == 1;
+            }
+
+            if (item_data["SecretShop"] != null)
+            {
+                item.require_secret_shop = (int)item_data["SecretShop"] == 1;
+            }
+
+            if (item_data["SideShop"] != null)
+            {
+                item.require_side_shop = (int)item_data["SideShop"] == 1;
+            }
+
+            if (item_data["ItemSellable"] != null)
+            {
+                item.sellable = (int)item_data["ItemSellable"] == 1;
+            }
+
+            if (item_data["ItemStackable"] != null)
+            {
+                item.stackable = (int)item_data["ItemStackable"] == 1;
             }
             
         }

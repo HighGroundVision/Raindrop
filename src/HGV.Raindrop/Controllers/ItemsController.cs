@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
+using HGV.Raindrop.Clients;
+using HGV.Raindrop.Model;
 
 namespace HGV.Raindrop.Controllers
 {
@@ -15,13 +17,11 @@ namespace HGV.Raindrop.Controllers
         // GET api/items
         [HttpGet()]
         //[ResponseCache(Duration = 3600)]
-        public async Task<string> Get()
+        public async Task<List<Item>> Get()
         {
-            using (var client = new HttpClient())
-            {
-                var json = await client.GetStringAsync("https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json");
-                return json;
-            }
+            var client = new ItemMetaClient();
+            var items = await client.GetItems();
+            return items;
         }
     }
 }

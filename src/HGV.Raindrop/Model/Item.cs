@@ -12,35 +12,41 @@ namespace HGV.Raindrop.Model
         public string tag { get; set; }
         public string name { get; set; }
 
+        public int price { get; set; } // cost
+
+        public bool combinable { get; set; }
+        public bool permanent { get; set; }
+        public bool stackable { get; set; }
+        public bool recipe { get; set; }
+        public bool droppable { get; set; }
+        public bool purchasable { get; set; }
+        public bool sellable { get; set; }
+        public bool destructible { get; set; }  // killable
+        public bool disassemblable { get; set; }
+        public bool require_side_shop { get; set; }
+        public bool require_secret_shop { get; set; }
+
+        public bool requires_charges { get; set; }
+        public int initial_charges { get; set; }
+
+        public List<int> cast_range { get; set; }
+
+        public List<double> cooldown { get; set; }
+        public List<int> manacost { get; set; }
+
+        public string quality { get; set; }
+
+        public List<string> behaviors { get; set; }
+
+        public Dictionary<string, double> attributes { get; set; }
+
         public Item()
         {
+            this.attributes = new Dictionary<string, double>();
+            this.behaviors = new List<string>();
+            this.cast_range = new List<int>();
+            this.cooldown = new List<double>();
+            this.manacost = new List<int>();
         }
-
-        /*
-        "ItemCost": "0",
-        "ItemInitialCharges": "0",
-        "ItemCombinable": "1",
-        "ItemPermanent": "1",
-        "ItemStackable": "0",
-        "ItemRecipe": "0",
-        "ItemDroppable": "1",
-        "ItemPurchasable": "1",
-        "ItemSellable": "1",
-        "ItemRequiresCharges": "0",
-        "ItemKillable": "1",
-        "ItemDisassemblable": "0",
-        "ItemShareability": "ITEM_NOT_SHAREABLE",
-
-        "AbilityBehavior": "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES",
-        "AbilityCastRange": "0",
-        "AbilityCastPoint": "0.0",
-        "AbilityCooldown": "12.0",
-        "AbilityManaCost": "0",
-        "ItemQuality": "component",
-        "ItemAliases": "blink dagger",
-        "SideShop": "1",
-        "ItemDeclarations": "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS",
-        */
-
     }
 }

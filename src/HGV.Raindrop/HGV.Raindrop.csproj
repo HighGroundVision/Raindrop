@@ -9,7 +9,6 @@
     <Content Include="wwwroot\lib\heropedia_ability.json" />
     <Content Include="wwwroot\lib\heropedia_hero.json" />
     <Content Include="wwwroot\lib\heropedia_item.json" />
-    <Content Include="wwwroot\lib\npc+items.json" />
     <Content Include="wwwroot\lib\npc_abilities.json" />
     <Content Include="wwwroot\lib\npc_heroes.json" />
     <Content Include="wwwroot\lib\npc_items.json" />
