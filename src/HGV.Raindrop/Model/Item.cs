@@ -38,11 +38,12 @@ namespace HGV.Raindrop.Model
 
         public List<string> behaviors { get; set; }
 
-        public Dictionary<string, double> attributes { get; set; }
+        // public Dictionary<string, List<double>> attributes { get; set; }
 
         public Item()
         {
-            this.attributes = new Dictionary<string, double>();
+            //this.attributes = new Dictionary<string, List<double>>();
+
             this.behaviors = new List<string>();
             this.cast_range = new List<int>();
             this.cooldown = new List<double>();

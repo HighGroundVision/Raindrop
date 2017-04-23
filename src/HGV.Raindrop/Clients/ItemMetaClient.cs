@@ -169,7 +169,21 @@ namespace HGV.Raindrop.Clients
             {
                 item.stackable = (int)item_data["ItemStackable"] == 1;
             }
-            
+
+            if (item_data["AbilityBehavior"] != null)
+            {
+                var ability_behavior = (string)item_data["AbilityBehavior"];
+
+                switch (ability_behavior)
+                {
+                    case "DOTA_ABILITY_BEHAVIOR_NONE":
+                        break;
+                    default:
+                        var behavior = ability_behavior.Replace("DOTA_ABILITY_BEHAVIOR_", "").Replace(" ", "").Replace("_", " ").ToLower();
+                        item.behaviors = behavior.Split('|').ToList();
+                        break;
+                }
+            }
         }
     }
 }
