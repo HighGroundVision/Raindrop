@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DE31B7C7-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HGV.Raindrop.Test", "test\HGV.Raindrop.Test.csproj", "{70C82206-FD1D-4CF8-86A0-6ADF7FAF09CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HGV.Raindrop", "src\HGV.Raindrop\HGV.Raindrop.csproj", "{A2F89EB2-0635-4B48-A75B-21C67E8BD550}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HGV.Raindrop", "src\HGV.Raindrop.csproj", "{A2F89EB2-0635-4B48-A75B-21C67E8BD550}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
