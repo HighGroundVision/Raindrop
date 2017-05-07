@@ -26,7 +26,7 @@ namespace HGV.Raindrop.Clients
                 var npc_skills_root = JObject.Parse(npc_skills_json);
                 var skill_defaults = npc_skills_root["DOTAAbilities"]["ability_base"];
 
-                var item_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=itemdata");
+                var item_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=itemdata&l=english");
                 var item_data_root = JObject.Parse(item_data_json);
                 var item_data = item_data_root["itemdata"];
 

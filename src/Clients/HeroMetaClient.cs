@@ -23,7 +23,7 @@ namespace HGV.Raindrop.Clients
                 var hero_collection = npc_heroes_root["DOTAHeroes"].ToList();
                 var hero_defaults = npc_heroes_root["DOTAHeroes"]["npc_dota_hero_base"];
 
-                var hero_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=herodata");
+                var hero_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=herodata&l=english");
                 var hero_data_root = JObject.Parse(hero_data_json);
                 var hero_data = hero_data_root["herodata"];
 
@@ -32,7 +32,7 @@ namespace HGV.Raindrop.Clients
                 var skill_collection = npc_skills_root["DOTAAbilities"].ToList();
                 var skill_defaults = npc_skills_root["DOTAAbilities"]["ability_base"];
 
-                var skill_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=abilitydata");
+                var skill_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=abilitydata&l=english");
                 var skill_data_root = JObject.Parse(skill_data_json);
                 var skill_data = skill_data_root["abilitydata"];
 
