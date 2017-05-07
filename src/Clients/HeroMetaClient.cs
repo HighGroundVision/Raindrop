@@ -452,7 +452,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability11"] != null)
@@ -462,7 +462,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability12"] != null)
@@ -472,7 +472,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability13"] != null)
@@ -482,7 +482,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability14"] != null)
@@ -492,7 +492,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability15"] != null)
@@ -502,7 +502,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability16"] != null)
@@ -512,7 +512,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability17"] != null)
@@ -522,7 +522,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability18"] != null)
@@ -532,7 +532,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability19"] != null)
@@ -542,7 +542,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability20"] != null)
@@ -552,7 +552,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability21"] != null)
@@ -562,7 +562,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability22"] != null)
@@ -572,7 +572,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability23"] != null)
@@ -582,7 +582,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
             if (hero_data["Ability24"] != null)
@@ -592,7 +592,7 @@ namespace HGV.Raindrop.Clients
                     return;
 
                 var ability = skills.Where(_ => _.key == key).FirstOrDefault();
-                var talenet = new Talenet() { ability_id = ability.ability_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
+                var talenet = new Talenet() { ability_id = ability.ability_id, hero_id = hero.hero_id, key = ability.key, name = ability.name, level = levels.Dequeue() };
                 hero.talenets.Add(talenet);
             }
         }
