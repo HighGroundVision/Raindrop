@@ -23,18 +23,14 @@ namespace HGV.Raindrop.Clients
                 var hero_collection = npc_heroes_root["DOTAHeroes"].ToList();
                 var hero_defaults = npc_heroes_root["DOTAHeroes"]["npc_dota_hero_base"];
 
-                var hero_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=herodata&l=english");
-                var hero_data_root = JObject.Parse(hero_data_json);
-                var hero_data = hero_data_root["herodata"];
-
                 var npc_skills_json = await client.GetStringAsync("https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_abilities.json");
                 var npc_skills_root = JObject.Parse(npc_skills_json);
                 var skill_collection = npc_skills_root["DOTAAbilities"].ToList();
                 var skill_defaults = npc_skills_root["DOTAAbilities"]["ability_base"];
 
-                var skill_data_json = await client.GetStringAsync("https://www.dota2.com/jsfeed/heropediadata?feeds=abilitydata&l=english");
-                var skill_data_root = JObject.Parse(skill_data_json);
-                var skill_data = skill_data_root["abilitydata"];
+                var lang_data_json = await client.GetStringAsync("https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/dota_english.json");
+                var lang_data_root = JObject.Parse(lang_data_json);
+                var lang_data = lang_data_root["lang"]["Tokens"];
 
                 foreach (JProperty item in skill_collection)
                 {
@@ -52,12 +48,13 @@ namespace HGV.Raindrop.Clients
 
                     var ability = new Ability();
 
-                    var ability_item = skill_data[key];
-                    if (ability_item == null)
+                    var langKey = "DOTA_Tooltip_ability_" + key;
+                    var name = lang_data[langKey];
+                    if (name == null)
                         continue;
 
+                    ability.name = name.Value<string>();
                     ability.key = key;
-                    ability.name = (string)ability_item["dname"];
 
                     // Set defaults
                     MapAbility(ability, skill_defaults);
@@ -79,17 +76,15 @@ namespace HGV.Raindrop.Clients
                     if (key == "npc_dota_hero_target_dummy")
                         continue;
 
-
-                    var tag = key.Replace("npc_dota_hero_", "");
-                    var x = hero_data[tag];
-                    if (x == null)
+                    var name = lang_data[key];
+                    if (name == null)
                         continue;
 
                     // Create hero
                     var hero = new Hero();
                     hero.key = key;
-                    hero.tag = tag;
-                    hero.name = (string)x["dname"];
+                    hero.tag = key.Replace("npc_dota_hero_", "");
+                    hero.name = name.Value<string>();
 
                     // Set defaults
                     MapHero(hero, hero_defaults);
