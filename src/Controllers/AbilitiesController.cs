@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HGV.Raindrop.Model;
-using HGV.Raindrop.Clients;
+using HGV.Basilius.Model;
+using HGV.Basilius.Clients;
 
 namespace HGV.Raindrop.Controllers
 {

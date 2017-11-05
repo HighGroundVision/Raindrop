@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
-using HGV.Raindrop.Clients;
-using HGV.Raindrop.Model;
+using HGV.Basilius.Clients;
+using HGV.Basilius.Model;
 
 namespace HGV.Raindrop.Controllers
 {
