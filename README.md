@@ -1,7 +1,7 @@
 # Raindrop
 **Build Status Bagde**
 
-A Asp.Net Core web application designed to serivce an api for downloading base stats on heroes, abilties, items.
+A Asp.Net Core web application designed to serivce an api for downloading base stats on heroes, abilities, items.
 
 **Project Status:**
 
